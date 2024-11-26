@@ -141,7 +141,7 @@ server.post('/ITC505/lab-7/index.html', (req, res) => {
                     <span class="highlighted">${noun2}</span>. This encounter marked the beginning of a legendary journey!
                 </p>
             </div>
-            <a href="/ITC505/lab-7/index.html" class="action-link">Create Another Fantasy Story 🏰</a>
+            <a href="/ITC505/lab-7/index.html" class="action-link">Create Another Story</a>
         </div>
     </body>
     </html>

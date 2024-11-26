@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔮 Mystical Galaxy Mad Lib Generator</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #6a0dad; /* Purple */
+            --secondary-color: #20b2aa; /* Teal */
+            --accent-color: #ff69b4; /* Hot Pink */
+            --background-color: #1e1e3f; /* Dark Galaxy Blue */
+            --text-color: #f3e9ff; /* Soft White */
+            --button-bg: #3498db; /* Blue */
+            --button-hover-bg: #2980b9; /* Darker Blue */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #1e1e3f; /* Dark background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            color: var(--text-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            background: rgba(30, 30, 63, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: var(--button-hover-bg);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive styling for smaller devices */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mystical Galaxy Mad Lib!</h1>
+
+        <form method="POST" action="/ITC505/lab-7/index.html">
+            <div class="form-group">
+                <label for="adjective1">🔮 Enter an adjective:</label>
+                <input
+                    type="text"
+                    id="adjective1"
+                    name="adjective1"
+                    placeholder="Ethereal, glowing, magical..."
+                    required />
+            </div>
+
+            <div class="form-group">
+                <label for="noun1">🌌 Enter a noun:</label>
+                <input
+                    type="text"
+                    id="noun1"
+                    name="noun1"
+                    placeholder="Wizard, constellation, star..."
+                    required />
+            </div>
+
+            <div class="form-group">
+                <label for="verb1">✨ Enter a verb:</label>
+                <input
+                    type="text"
+                    id="verb1"
+                    name="verb1"
+                    placeholder="Soar, enchant, illuminate..."
+                    required />
+            </div>
+
+            <div class="form-group">
+                <label for="adverb1">🌟 Enter an adverb:</label>
+                <input
+                    type="text"
+                    id="adverb1"
+                    name="adverb1"
+                    placeholder="Mystically, boldly, gracefully..."
+                    required />
+            </div>
+
+            <div class="form-group">
+                <label for="noun2">🪐 Enter another noun:</label>
+                <input
+                    type="text"
+                    id="noun2"
+                    name="noun2"
+                    placeholder="Galaxy, portal, nebula..."
+                    required />
+            </div>
+
+            <button type="submit">Create My Mystical Story! ✨</button>
+        </form>
+
+        <footer>
+            <p>
+                Last updated:
+                <span id="lastModified"></span>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('lastModified').textContent =
+            'Last updated: ' + document.lastModified;
+    </script>
+</body>
+</html>
